@@ -1,0 +1,23 @@
+#define CONFIG_NAND_X_BOOT
+#define CONFIG_LCD_KR070LA0S_270 1
+#define CONFIG_FB_JZ4780_LCDC1 1
+#define CONFIG_JZ4780 1
+#define CONFIG_JZ4780_WARRIOR 1
+#define CONFIG_SDRAM_DDR3
+#define CONFIG_ACT8600
+#define FAST_BOOT_SUPPORT
+#define NO_CHARGE_DETE
+#define I2C_BASE I2C1_BASE
+#define CONFIG_XBOOT_POWERON_LONG_PRESSED 1
+#define CONFIG_XBOOT_LOGO_FILE 1
+#define CONFIG_XBOOT_LOGO_FILE_LEN 124568
+#define CONFIG_XBOOT_LOW_BATTERY_DETECT
+#define CONFIG_RELEASE_VERSION 0
+#define CONFIG_PRODUCT_NAME "warrior"
+
+/* Automatically generated - do not edit */
+#include <configs/warrior.h>
+#include <jz4780.h>
+
+#define SPL_LOAD_ADDR 
+#define X_BOOT_LOAD_ADDR 

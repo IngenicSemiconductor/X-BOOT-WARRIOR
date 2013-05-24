@@ -1,0 +1,25 @@
+
+			X-Boot Readme
+
+Sources directory
+-----------------
+
+  spl/		- contains the spl sources.
+  boot/	  	- contains the loader sources that will be loaded by spl.
+  Makefile	- top makefile
+  config.mk/rules.mk - common makefile includes.
+  mkconfig	- tool to create include/config.h
+  x-boot.lds	- linker script
+
+Build Steps
+-----------
+
+  1. Select a board config:
+
+    $ make warrior_nand_config
+
+  2. Compile the binary:
+
+    $ make
+
+  After compiled, x-boot-nand.bin is created, please use usb_boot tool to flash x-boot-nand.bin into Nand flash.
