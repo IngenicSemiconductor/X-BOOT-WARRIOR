@@ -895,7 +895,7 @@ void do_cmd_erase(USB_STATUS *status)
         flash_erase(ptn);
         tx_status(status, "OKAY");
 #ifdef IMG_CONVERT_TO_BIN
-	if(strncmp(ptn->name,'boot',sizeof(ptn->name)) && strncmp(ptn->name,'recovery',sizeof(ptn->name))){
+	if(strncmp(ptn->name,"boot",sizeof(ptn->name)) && strncmp(ptn->name,"recovery",sizeof(ptn->name))){
 		serial_puts_msg("update error partition in jz4780_poll.c: ");
 		convert_img_uperrorpt(ptn, 0, NULL, 0, NAND_ERASE_PARTITION);
 	}

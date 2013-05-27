@@ -255,10 +255,10 @@ int nand_write_nooob(unsigned int ptnstart, unsigned int ptnlength, const void *
 			serial_put_hex(curblocknum);
 			curblocknum ++;
 		} else {
-			serial_puts_msg("---------------------Current write block at 0x");
-			serial_put_hex(curblocknum);
+			/* serial_puts_msg("---------------------Current write block at 0x"); */
+			/* serial_put_hex(curblocknum); */
 			curpagenum = curblocknum * param.page_per_block;
-			nand_erase_block(curblocknum);
+                        //			nand_erase_block(curblocknum);
 			for (pagecnt = 0; pagecnt < param.page_per_block; pagecnt++) {
 				ret = nand_program_page(curaddr, curpagenum + pagecnt);
 				if (ret < 0) {

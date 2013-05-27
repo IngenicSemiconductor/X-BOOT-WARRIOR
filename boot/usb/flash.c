@@ -137,6 +137,9 @@ int flash_write(ptentry *ptn, unsigned oobtype, const void *data, unsigned bytes
 	//serial_puts_info("Flash_writing ...\n");
 #ifndef IMG_CONVERT_TO_BIN
 	flash_erase(ptn);
+#else
+        if(strcmp(ptn->name, "system"))
+            flash_erase(ptn);
 #endif
 #if defined(CONFIG_JZ4780) || defined(CONFIG_JZ4780_TEST)
 	oobtype = NO_OOB;
