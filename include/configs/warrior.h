@@ -191,8 +191,9 @@
 #define PTN_CACHE_OFFSET           ( (576 + 512) * 0x100000)
 #define PTN_CACHE_SIZE             ( 128 * 0x100000)
 #define PTN_USERDATA_OFFSET        ( (704 + 512) * 0x100000)
-#define PTN_USERDATA_SIZE          ( 1024 * 0x100000)
-#define PTN_STORAGE_OFFSET         ( (1728 + 512) * 0x100000)
+#define PTN_USERDATA_SIZE          ( 2800 * 0x100000UL)
+//#define PTN_USERDATA_SIZE          ( 1024 * 0x100000)
+//#define PTN_STORAGE_OFFSET         ( (1728 + 512) * 0x100000)
 
 #else
 /*-----------------------------------------------------------------------
