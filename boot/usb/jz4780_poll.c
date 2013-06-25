@@ -931,6 +931,7 @@ void ram_boot(void)
     int kernel_actual;
     int ramdisk_actual;
     unsigned int size;
+    unsigned int page_size;
     unsigned int page_mask;
     struct boot_img_hdr *bootimginfo;
     void (*kernel)(int, char **, char *);
@@ -942,10 +943,11 @@ void ram_boot(void)
     }
 
     bootimginfo = (struct boot_img_hdr *)Bulk_Data_Buf;
-    page_mask = CFG_NAND_PAGE_SIZE - 1;
+    page_size = bootimginfo->page_size;
+    page_mask = page_size - 1;
     kernel_actual = (bootimginfo->kernel_size + page_mask) & (~page_mask);
     ramdisk_actual = (bootimginfo->ramdisk_size + page_mask) & (~page_mask);
-    size = kernel_actual + ramdisk_actual;
+    size = page_size + kernel_actual + ramdisk_actual;
 
     // From 0x30000000 to CFG_KERNEL_DST
     memcpy((unsigned char*)CFG_KERNEL_DST, (unsigned char*)Bulk_Data_Buf, size);
