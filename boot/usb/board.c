@@ -26,8 +26,6 @@
     #define SYSTEM_SIZE            PTN_SYSTEM_SIZE
     #define USERDATA_OFFSET        PTN_USERDATA_OFFSET
     #define USERDATA_SIZE          PTN_USERDATA_SIZE
-    #define STORAGE_OFFSET         PTN_STORAGE_OFFSET
-    #define STORAGE_SIZE           (MTDPART_SIZ_FULL)
 
 ptentry PTABLE[] = {
     {
@@ -69,11 +67,6 @@ ptentry PTABLE[] = {
         .start = USERDATA_OFFSET,
         .length = USERDATA_SIZE,
         .name = "userdata",
-    },
-    {
-	    .start = STORAGE_OFFSET,
-	    .length = STORAGE_SIZE,
-	    .name = "storage",
     },
     {
         .name = "",
