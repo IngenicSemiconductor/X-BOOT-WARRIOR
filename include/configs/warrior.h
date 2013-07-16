@@ -95,7 +95,7 @@
 #if (CONFIG_RELEASE_VERSION == 1)
 #define CONFIG_BOOTARGS		"mem=256M@0x0 mem=752M@0x30000000 ip=off root=/dev/ram0 rw rdinit=/init pmem_camera=16M@0x5f000000"
 #else
-#define CONFIG_BOOTARGS		"mem=256M@0x0 mem=752M@0x30000000 console=ttyS3,57600n8 ip=off root=/dev/ram0 rw rdinit=/init pmem_camera=16M@0x5f000000"
+#define CONFIG_BOOTARGS		"mem=256M@0x0 mem=752M@0x30000000 console=ttyS3,57600n8 ip=off root=/dev/ram0 rw rdinit=/init pmem_camera=16M@0x5f000000 serialno=warrior"
 #endif
 
 #define CFG_AUTOLOAD		"n"		/* No autoload */
